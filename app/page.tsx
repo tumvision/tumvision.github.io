@@ -1,21 +1,34 @@
 import Image from "next/image";
+import InfoStack, { InfoStackItem } from "@/components/InfoStack";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { BsTwitterX } from "react-icons/bs";
 
 export default function Home() {
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <Image src="/logo.png" width={200} height={200} alt="TUMVision Logo" />
-      <h1 className="text-2xl font-bold">TUMVision</h1>
-      <h2 className="text-lg font-bold">3D Computer Vision Club</h2>
-      <h4 className="text-lg">This site is a work in progress.</h4>
-      <h4 className="text-lg">Please come back later.</h4>
-    </main>
+    <div className="bg-logo_bg">
+      <main
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <h1 className="text-7xl font-bold">
+          <span className="text-logo_txt">TUM</span>
+          <span className="text-logo_main">Vision</span>
+        </h1>
+        <h2 className="text-3xl text-logo_txt">3D Computer Vision Club</h2>
+      </main>
+      <InfoStack position="left">
+        <InfoStackItem type="icon" content={<FiGithub />} />
+        <InfoStackItem type="icon" content={<FiLinkedin />} />
+        <InfoStackItem type="icon" content={<BsTwitterX />} />
+      </InfoStack>
+      <InfoStack position="right">
+        <InfoStackItem type="text" content="contact@tumvision.club" />
+      </InfoStack>
+    </div>
   );
 }

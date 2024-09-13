@@ -1,6 +1,13 @@
 import { Metadata } from "next";
 import "./globals.css";
 
+import { Nunito } from "next/font/google";
+
+const roboto = Nunito({
+  weight: "700",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "TUMVision",
   description: "3D Computer Vision Club",
@@ -16,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased ${roboto.className}`}>{children}</body>
     </html>
   );
 }
