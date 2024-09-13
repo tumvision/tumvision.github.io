@@ -1,4 +1,3 @@
-import Image from "next/image";
 import InfoStack, { InfoStackItem } from "@/components/InfoStack";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { BsTwitterX } from "react-icons/bs";
