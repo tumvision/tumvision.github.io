@@ -33,12 +33,12 @@ export default function About() {
       <Headline className="mt-5">Team</Headline>
       <Text className="mt-2">
         The management team is responsible for the overall organization and
-        coordination of the club's activities. We are currently 4 core
+        coordination of the club&apos;s activities. We are currently 4 core
         management team members.
       </Text>
       <TeamImage src="/team/team.png" />
       <Headline className="mt-5">Members</Headline>
-      <Text className="mt-2">Here's our current management members:</Text>
+      <Text className="mt-2">Here&apos;s our current management members:</Text>
       <div className="grid grid-cols-2 gap-4 mb-10">
         <MemberImage name="Member 1" src="team/robin.png" />
         <MemberImage name="Member 2" src="team/robin.png" />

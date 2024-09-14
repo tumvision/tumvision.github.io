@@ -4,7 +4,6 @@ import Navbar from "@/app/components/Navbar";
 
 import { Nunito } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
 
 // default font
 const roboto = Nunito({

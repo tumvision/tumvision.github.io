@@ -8,7 +8,7 @@ export default function Projects() {
     <Container>
       <Headline>Projects</Headline>
       <Text className="mt-2">
-        We'll have more information for you very soon!
+        We&apos;ll have more information for you very soon!
       </Text>
     </Container>
   );
