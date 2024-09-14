@@ -51,7 +51,7 @@ const Navbar = () => {
     <React.Fragment>
       <motion.div
         className={`fixed top-0 z-[2000] w-full`}
-        initial={false}
+        initial={open}
         animate={{
           paddingTop: variant === "default" ? "1.5rem" : "0.75rem",
           paddingBottom: variant === "default" ? "1.5rem" : "0.75rem",
@@ -69,17 +69,24 @@ const Navbar = () => {
             x: open ? "100%" : "200%",
           }}
           transition={{
-            duration: 0.6,
+            duration: 0.3,
           }}
         >
           <div className="flex flex-col gap-8">
-            {NAVBAR_ITEMS.map(({ id, link }) => (
-              <a key={id} className="flex cursor-pointer flex-col items-center">
+            {NAVBAR_ITEMS.map(({ id, link, href }) => (
+              <Link
+                href={href}
+                key={id}
+                className="flex cursor-pointer flex-col items-center"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 <span className="txt font-mono text-logo_main">{`[0${id}]`}</span>
                 <span className="text-2xl text-logo_txt hover:text-logo_main">
                   {link}
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </motion.div>
@@ -142,7 +149,7 @@ const DropdownIcon = ({
           opacity: open ? [0, 0, 1, 1] : [1, 1, 0, 0],
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.3,
           times: [0, 0.5, 0.5, 1],
         }}
       />
@@ -157,7 +164,7 @@ const DropdownIcon = ({
           opacity: open ? [0, 0, 1, 1] : [1, 1, 0, 0],
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.3,
           times: [0, 0.5, 0.5, 1],
         }}
       />
@@ -172,7 +179,7 @@ const DropdownIcon = ({
           opacity: open ? [1, 1, 0, 0] : [0, 0, 1, 1],
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.3,
           times: [0, 0.5, 0.5, 1],
         }}
       />
@@ -185,7 +192,7 @@ const DropdownIcon = ({
           opacity: open ? [1, 1, 0, 0] : [0, 0, 1, 1],
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.3,
           times: [0, 0.5, 0.5, 1],
         }}
       />
@@ -199,7 +206,7 @@ const DropdownIcon = ({
           opacity: open ? [1, 1, 0, 0] : [0, 0, 1, 1],
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.3,
           times: [0, 0.5, 0.5, 1],
         }}
       />

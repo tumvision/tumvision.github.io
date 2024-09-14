@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         </h1>
         <h2 className="text-3xl text-logo_txt">3D Computer Vision Club</h2>
       </div>
+      <Footer mode="fixed" />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Footer from "@/app/components/Footer";
+
 import Navbar from "@/app/components/Navbar";
 
 import { Nunito } from "next/font/google";
@@ -29,10 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${roboto.className} bg-logo_bg`}>
         <Navbar />
-        <main className="flex flex-col justify-between min-h-screen  max-w-[700px] mx-auto">
-          {children}
-          <Footer mode="dynamic" />
-        </main>
+        {children}
       </body>
     </html>
   );
