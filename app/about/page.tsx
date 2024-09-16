@@ -1,5 +1,5 @@
 import React from "react";
-import { MemberImage, TeamImage } from "@/app/components/Member";
+// import { MemberImage, TeamImage } from "@/app/components/Member";
 import Container from "@/app/components/Container";
 import Text from "@/app/components/Text";
 import Headline from "@/app/components/Headline";
