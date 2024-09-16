@@ -8,8 +8,8 @@ import Link from "next/link";
 const NAVBAR_ITEMS = [
   { id: 1, link: "About", href: "about" },
   { id: 2, link: "Meetups", href: "meetups" },
-  { id: 3, link: "Projects", href: "projects" },
-  { id: 4, link: "Contact", href: "contact" },
+  // { id: 3, link: "Projects", href: "projects" },
+  // { id: 4, link: "Contact", href: "contact" },
 ];
 
 type NavbarVariants = "hidden" | "default" | "visible";
