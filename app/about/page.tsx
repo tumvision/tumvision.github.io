@@ -11,7 +11,7 @@ export default function About() {
       <Text className="mt-2">
         Hey everyone, we are a group of computer science students at the
         Technical University of Munich (TUM) enthusiastic about the realm of 3D
-        Computer Vision. Our initiative has been established with the purpose of
+        computer vision. Our initiative has been established with the purpose of
         fostering a collaborative community among like-minded students,
         researchers, and industry professionals who are interested in the latest
         developments in the field of 3D computer vision and are passionate about
