@@ -12,6 +12,14 @@ export default function Meetups() {
         We are organizing events to bring together students, researchers and
         industry who share our passion for 3D computer vision.
       </Text>
+      <Headline className="text-xl mt-4">Upcoming Events</Headline>
+      <ReadingGroup
+        speaker="Shivangi Aneja"
+        time="28.11.2024 18:00-19:00"
+        title="GaussianSpeech: Audio-Driven Gaussian Avatars"
+        paper="https://shivangi-aneja.github.io/projects/gaussianspeech"
+        className="mt-2"
+      />
       <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="Peter Kocsis"
@@ -46,14 +54,6 @@ export default function Meetups() {
         time="28.11.2024 18:00-19:00"
         title="Mesh2NeRF: Direct Mesh Supervision for Neural Radiance Field Representation and Generation"
         paper="https://terencecyj.github.io/projects/Mesh2NeRF/"
-        className="mt-2"
-      />
-      <Headline className="text-xl mt-4">Upcoming Events</Headline>
-      <ReadingGroup
-        speaker="Shivangi Aneja"
-        time="28.11.2024 18:00-19:00"
-        title="GaussianSpeech: Audio-Driven Gaussian Avatars"
-        paper="https://shivangi-aneja.github.io/projects/gaussianspeech"
         className="mt-2"
       />
     </Container>
