@@ -34,6 +34,28 @@ export default function Meetups() {
         paper="https://simongiebenhain.github.io/NPHM/"
         className="mt-2"
       />
+      <ReadingGroup
+        speaker="Manuel Dahnert"
+        time="21.11.2024 18:00-19:00"
+        title="Coherent 3D Scene Diffusion From a Single RGB Image"
+        paper="https://www.manuel-dahnert.com/research/scene-diffusion"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Yujin Chen"
+        time="28.11.2024 18:00-19:00"
+        title="Mesh2NeRF: Direct Mesh Supervision for Neural Radiance Field Representation and Generation"
+        paper="https://terencecyj.github.io/projects/Mesh2NeRF/"
+        className="mt-2"
+      />
+      <Headline className="text-xl mt-4">Upcoming Events</Headline>
+      <ReadingGroup
+        speaker="Shivangi Aneja"
+        time="28.11.2024 18:00-19:00"
+        title="GaussianSpeech: Audio-Driven Gaussian Avatars"
+        paper="https://shivangi-aneja.github.io/projects/gaussianspeech"
+        className="mt-2"
+      />
     </Container>
   );
 }
