@@ -20,6 +20,13 @@ export default function Meetups() {
         paper="https://shivangi-aneja.github.io/projects/gaussianspeech"
         className="mt-2"
       />
+      <ReadingGroup
+        speaker="Daoyi Gao"
+        time="12.12.2024 18:00-19:00"
+        title="MeshArt: Generating Articulated Meshes with Structure-guided Transformers"
+        paper="https://daoyig.github.io/"
+        className="mt-2"
+      />
       <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="Peter Kocsis"
