@@ -15,7 +15,7 @@ export default function Meetups() {
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
         speaker="Shivangi Aneja"
-        time="28.11.2024 18:00-19:00"
+        time="05.12.2024 18:00-19:00"
         title="GaussianSpeech: Audio-Driven Gaussian Avatars"
         paper="https://shivangi-aneja.github.io/projects/gaussianspeech"
         className="mt-2"
