@@ -12,7 +12,7 @@ export default function Meetups() {
         We are organizing events to bring together students, researchers and
         industry who share our passion for 3D computer vision.
       </Text>
-      <Headline className="text-xl mt-4">Upcoming Events</Headline>
+      <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="Peter Kocsis"
         time="17.10.2024 18:00-19:00"
