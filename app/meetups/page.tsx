@@ -10,7 +10,7 @@ export default function Meetups() {
       <Headline>Meetups</Headline>
       <Text className="mt-2">
         We are organizing events to bring together students, researchers and
-        industry who share our passion for 3D computer vision - no registration needed.
+        industry who share our passion for 3D computer vision.
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
