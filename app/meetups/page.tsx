@@ -17,7 +17,56 @@ export default function Meetups() {
         speaker="Mateo de Mayo"
         time="22.05.2025 18:00-19:00"
         title="Visual-inertial tracking for Spatial Agents"
-        paper="https://cvg.cit.tum.de/members/mayom"
+        paper="https://mateosss.github.io/"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Riccardo Marin"
+        time="05.06.2025 18:00-19:00"
+        title="On 3D Virtual Humans and Their Behavior"
+        paper="https://ricma.netlify.app/talk/"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Haoxuan Li"
+        time="12.06.2025 18:00-19:00"
+        title="MeshPad: Interactive Sketch-Conditioned Artist-Designed Mesh Generation and Editing"
+        paper="https://derkleineli.github.io/meshpad/"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Xinyi Zhang"
+        time="26.06.2025 18:00-19:00"
+        title="DNF: Unconditional 4D Generation with Dictionary-based Neural Fields"
+        paper="https://xzhang-t.github.io/project/DNF/"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Ziya Erkoc"
+        time="03.07.2025 18:00-19:00"
+        title="PrEditor3D: Fast and Precise 3D Shape Editing"
+        paper="https://ziyaerkoc.com/preditor3d/"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Jiapeng Tang"
+        time="10.07.2025 18:00-19:00"
+        title="GAF: Gaussian Avatar Reconstruction from Monocular Videos via Multi-view Diffusion"
+        paper="https://tangjiapeng.github.io/projects/GAF/"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="David Rozenberski"
+        time="17.07.2025 18:00-19:00"
+        title="UnScene3D: Unsupervised 3D Instance Segmentation for Indoor Scenes"
+        paper="https://rozdavid.github.io/unscene3d"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Cecilia Curreli"
+        time="24.07.2025 18:00-19:00"
+        title="Nonisotropic Gaussian Diffusion for 3D Human Motion Prediction"
+        paper="https://ceveloper.github.io/publications/skeletondiffusion/"
         className="mt-2"
       />
       <Headline className="text-xl mt-4">Previous Events</Headline>
