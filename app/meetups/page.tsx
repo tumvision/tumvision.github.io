@@ -14,13 +14,6 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
-        speaker="Mateo de Mayo"
-        time="22.05.2025 18:00-19:00"
-        title="Visual-inertial tracking for Spatial Agents"
-        paper="https://mateosss.github.io/"
-        className="mt-2"
-      />
-      <ReadingGroup
         speaker="Riccardo Marin"
         time="05.06.2025 18:00-19:00"
         title="On 3D Virtual Humans and Their Behavior"
@@ -70,6 +63,13 @@ export default function Meetups() {
         className="mt-2"
       />
       <Headline className="text-xl mt-4">Previous Events</Headline>
+      <ReadingGroup
+        speaker="Mateo de Mayo"
+        time="22.05.2025 18:00-19:00"
+        title="Visual-inertial tracking for Spatial Agents"
+        paper="https://mateosss.github.io/"
+        className="mt-2"
+      />
       <ReadingGroup
         speaker="Artem Sevastopolsky"
         time="06.02.2025 18:00-19:00"
