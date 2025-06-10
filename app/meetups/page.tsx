@@ -14,13 +14,6 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
-        speaker="Riccardo Marin"
-        time="05.06.2025 18:00-19:00"
-        title="On 3D Virtual Humans and Their Behavior"
-        paper="https://ricma.netlify.app/talk/"
-        className="mt-2"
-      />
-      <ReadingGroup
         speaker="Haoxuan Li"
         time="12.06.2025 18:00-19:00"
         title="MeshPad: Interactive Sketch-Conditioned Artist-Designed Mesh Generation and Editing"
@@ -63,6 +56,13 @@ export default function Meetups() {
         className="mt-2"
       />
       <Headline className="text-xl mt-4">Previous Events</Headline>
+      <ReadingGroup
+        speaker="Riccardo Marin"
+        time="05.06.2025 18:00-19:00"
+        title="On 3D Virtual Humans and Their Behavior"
+        paper="https://ricma.netlify.app/talk/"
+        className="mt-2"
+      />
       <ReadingGroup
         speaker="Mateo de Mayo"
         time="22.05.2025 18:00-19:00"
