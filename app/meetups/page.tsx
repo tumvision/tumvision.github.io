@@ -14,13 +14,6 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
-        speaker="Haoxuan Li"
-        time="12.06.2025 18:00-19:00"
-        title="MeshPad: Interactive Sketch-Conditioned Artist-Designed Mesh Generation and Editing"
-        paper="https://derkleineli.github.io/meshpad/"
-        className="mt-2"
-      />
-      <ReadingGroup
         speaker="Xinyi Zhang"
         time="26.06.2025 18:00-19:00"
         title="DNF: Unconditional 4D Generation with Dictionary-based Neural Fields"
@@ -56,6 +49,13 @@ export default function Meetups() {
         className="mt-2"
       />
       <Headline className="text-xl mt-4">Previous Events</Headline>
+      <ReadingGroup
+        speaker="Haoxuan Li"
+        time="12.06.2025 18:00-19:00"
+        title="MeshPad: Interactive Sketch-Conditioned Artist-Designed Mesh Generation and Editing"
+        paper="https://derkleineli.github.io/meshpad/"
+        className="mt-2"
+      />
       <ReadingGroup
         speaker="Riccardo Marin"
         time="05.06.2025 18:00-19:00"
