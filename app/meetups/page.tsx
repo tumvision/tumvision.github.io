@@ -14,13 +14,6 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
-        speaker="Jiapeng Tang"
-        time="10.07.2025 18:00-19:00"
-        title="GAF: Gaussian Avatar Reconstruction from Monocular Videos via Multi-view Diffusion"
-        paper="https://tangjiapeng.github.io/projects/GAF/"
-        className="mt-2"
-      />
-      <ReadingGroup
         speaker="David Rozenberski"
         time="17.07.2025 18:00-19:00"
         title="UnScene3D: Unsupervised 3D Instance Segmentation for Indoor Scenes"
@@ -35,6 +28,13 @@ export default function Meetups() {
         className="mt-2"
       />
       <Headline className="text-xl mt-4">Previous Events</Headline>
+      <ReadingGroup
+        speaker="Jiapeng Tang"
+        time="10.07.2025 18:00-19:00"
+        title="GAF: Gaussian Avatar Reconstruction from Monocular Videos via Multi-view Diffusion"
+        paper="https://tangjiapeng.github.io/projects/GAF/"
+        className="mt-2"
+      />
       <ReadingGroup
         speaker="Ziya Erkoc"
         time="03.07.2025 18:00-19:00"
