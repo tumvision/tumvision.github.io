@@ -13,6 +13,7 @@ export default function Meetups() {
         industry who share our passion for 3D computer vision - no registration needed.
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
+      <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="David Rozenberski"
         time="17.07.2025 18:00-19:00"
@@ -20,14 +21,6 @@ export default function Meetups() {
         paper="https://rozdavid.github.io/unscene3d"
         className="mt-2"
       />
-      <ReadingGroup
-        speaker="Cecilia Curreli"
-        time="24.07.2025 18:00-19:00"
-        title="Nonisotropic Gaussian Diffusion for 3D Human Motion Prediction"
-        paper="https://ceveloper.github.io/publications/skeletondiffusion/"
-        className="mt-2"
-      />
-      <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="Jiapeng Tang"
         time="10.07.2025 18:00-19:00"
