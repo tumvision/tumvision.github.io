@@ -3,6 +3,7 @@ import Container from "@/app/components/Container";
 import Headline from "@/app/components/Headline";
 import Text from "@/app/components/Text";
 import ReadingGroup from "@/app/components/ReadingGroup";
+import ReadingGroupNew from "../components/ReadingGroupNew";
 
 export default function Meetups() {
   return (
@@ -10,10 +11,11 @@ export default function Meetups() {
       <Headline>Meetups</Headline>
       <Text className="mt-2">
         We are organizing events to bring together students, researchers and
-        industry who share our passion for 3D computer vision - no registration needed.
+        industry who share our passion for 3D computer vision - no registration
+        needed.
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
-      <ReadingGroup
+      <ReadingGroupNew
         speaker="Yueh-Cheng Liu"
         time="11.11.2025 18:00-19:00"
         title="QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization"
@@ -133,7 +135,6 @@ export default function Meetups() {
         paper="https://peter-kocsis.github.io/IntrinsicImageDiffusion/"
         className="mt-2"
       />
-
     </Container>
   );
 }
