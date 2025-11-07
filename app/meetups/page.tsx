@@ -13,6 +13,13 @@ export default function Meetups() {
         industry who share our passion for 3D computer vision - no registration needed.
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
+      <ReadingGroup
+        speaker="Yueh-Cheng Liu"
+        time="11.11.2025 18:00-19:00"
+        title="QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization"
+        paper="https://liu115.github.io/quicksplat"
+        className="mt-2"
+      />
       <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="David Rozenberski"
