@@ -3,7 +3,7 @@ import Container from "@/app/components/Container";
 import Headline from "@/app/components/Headline";
 import Text from "@/app/components/Text";
 import ReadingGroup from "@/app/components/ReadingGroup";
-import ReadingGroupNew from "../components/ReadingGroupNew";
+import ReadingGroupNew from "@/app/components/ReadingGroupNew";
 
 export default function Meetups() {
   return (
