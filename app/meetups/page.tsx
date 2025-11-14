@@ -16,6 +16,13 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroupNew
+        speaker="Peter Kocsis"
+        time="18.11.2025 18:00-19:00"
+        title="IntrinsiX: High-Quality PBR Generation using Image Priors"
+        paper="https://peter-kocsis.github.io/IntrinsiX/"
+        className="mt-2"
+      />
+      <ReadingGroupNew
         speaker="Yueh-Cheng Liu"
         time="11.11.2025 18:00-19:00"
         title="QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization"
