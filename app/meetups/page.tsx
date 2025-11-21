@@ -16,6 +16,13 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroupNew
+        speaker="Jonathan Schmidt"
+        time="25.11.2025 18:00-19:00"
+        title="BecomingLit: Relightable Gaussian Avatars with Hybrid Neural Shading"
+        paper="https://jonathsch.github.io/becominglit/"
+        className="mt-2"
+      />
+      <ReadingGroupNew
         speaker="Peter Kocsis"
         time="18.11.2025 18:00-19:00"
         title="IntrinsiX: High-Quality PBR Generation using Image Priors"
