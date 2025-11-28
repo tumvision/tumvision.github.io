@@ -16,6 +16,13 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroupNew
+        speaker="Thomas Dages"
+        time="02.12.2025 18:00-19:00"
+        title="Metric Convolutions: A Unifying Theory to Adaptive Image Convolutions"
+        paper="https://openaccess.thecvf.com/content/ICCV2025/html/Dages_Metric_Convolutions_A_Unifying_Theory_to_Adaptive_Image_Convolutions_ICCV_2025_paper.html"
+        className="mt-2"
+      />
+      <ReadingGroupNew
         speaker="Jonathan Schmidt"
         time="25.11.2025 18:00-19:00"
         title="BecomingLit: Relightable Gaussian Avatars with Hybrid Neural Shading"
