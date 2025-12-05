@@ -16,6 +16,13 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroupNew
+        speaker="Cecilia Curreli"
+        time="09.12.2025 18:00-19:00"
+        title="Nonisotropic Gaussian Diffusion for Realistic 3D Human Motion Prediction"
+        paper="https://arxiv.org/abs/2501.06035"
+        className="mt-2"
+      />
+      <ReadingGroupNew
         speaker="Thomas Dages"
         time="02.12.2025 18:00-19:00"
         title="Metric Convolutions: A Unifying Theory to Adaptive Image Convolutions"
