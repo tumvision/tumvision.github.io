@@ -4,7 +4,7 @@ import Headline from "@/app/components/Headline";
 import Text from "@/app/components/Text";
 import ReadingGroup from "@/app/components/ReadingGroup";
 import ReadingGroupNew from "@/app/components/ReadingGroupNew";
-import Kickoff from "@/app/components/KicoOff";
+import Kickoff from "@/app/components/Kickoff";
 
 export default function Meetups() {
   return (
