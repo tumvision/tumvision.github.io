@@ -22,6 +22,7 @@ export default function Meetups() {
         title="World Models: Connecting the Digital and Physical World"
         className="mt-2"
       />
+      <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroupNew
         speaker="Cecilia Curreli"
         time="09.12.2025 18:00-19:00"
@@ -57,7 +58,6 @@ export default function Meetups() {
         paper="https://liu115.github.io/quicksplat"
         className="mt-2"
       />
-      <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="David Rozenberski"
         time="17.07.2025 18:00-19:00"
