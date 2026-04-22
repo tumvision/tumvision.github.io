@@ -2,8 +2,8 @@ import React from "react";
 
 type KickoffProps = {
   speaker: string;
-  time: string;
   title: string;
+  time: string;
   className?: string;
 };
 
@@ -23,12 +23,12 @@ const Kickoff = ({
         <span>{speaker}</span>
       </p>
       <p>
-        <span className="">Time: </span>
-        <span>{time}</span>
-      </p>
-      <p>
         <span className="">Title: </span>
         <span>{title}</span>
+      </p>
+      <p>
+        <span className="">Time: </span>
+        <span>{time}</span>
       </p>
       <p className="text-sm font-light text-logo_txt">
         <span className="">Location: </span>

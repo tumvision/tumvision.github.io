@@ -18,8 +18,8 @@ export default function Meetups() {
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <Kickoff
         speaker="Prof. Dr. Matthias Nießner"
-        time="28.04.2026 18:00-19:00"
         title="World Models: Connecting the Digital and Physical World"
+        time="28.04.2026 18:00-19:00"
         className="mt-2"
       />
       <Headline className="text-xl mt-4">Previous Events</Headline>

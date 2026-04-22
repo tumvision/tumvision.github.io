@@ -2,8 +2,8 @@ import React from "react";
 
 type ReadingGroupProps = {
   speaker: string;
-  time: string;
   title: string;
+  time: string;
   paper: string;
   className?: string;
 };
