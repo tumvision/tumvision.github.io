@@ -4,6 +4,7 @@ import Headline from "@/app/components/Headline";
 import Text from "@/app/components/Text";
 import ReadingGroup from "@/app/components/ReadingGroup";
 import ReadingGroupNew from "@/app/components/ReadingGroupNew";
+import Kickoff from "../components/KickOff";
 
 export default function Meetups() {
   return (
@@ -15,6 +16,12 @@ export default function Meetups() {
         needed.
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
+      <Kickoff
+        speaker="Prof. Dr. Matthias Nießner"
+        time="28.04.2026 18:00-19:00"
+        title="World Models: Connecting the Digital and Physical World"
+        className="mt-2"
+      />
       <ReadingGroupNew
         speaker="Cecilia Curreli"
         time="09.12.2025 18:00-19:00"

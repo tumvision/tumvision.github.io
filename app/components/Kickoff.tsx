@@ -1,34 +1,26 @@
 import React from "react";
 
-type ReadingGroupProps = {
+type KickoffProps = {
   speaker: string;
   time: string;
   title: string;
-  paper: string;
   className?: string;
 };
 
-const ReadingGroup = ({
+const Kickoff = ({
   speaker,
   title,
   time,
-  paper,
   className,
-}: ReadingGroupProps) => {
+}: KickoffProps) => {
   return (
     <div className={`text-sm font-light text-logo_txt ${className}`}>
       <p className="text-lg">
-        <span className="text-logo_main">&gt; </span>Paper Reading Group
+        <span className="text-logo_main">&gt; </span>Kickoff session
       </p>
       <p>
         <span className="">Speaker: </span>
         <span>{speaker}</span>
-      </p>
-      <p>
-        <span className="">Title: </span>
-        <a href={paper} className="hover:text-logo_main  cursor-pointer">
-          {title}
-        </a>
       </p>
       <p>
         <span className="">Time: </span>
@@ -50,4 +42,4 @@ const ReadingGroup = ({
   );
 };
 
-export default ReadingGroup;
+export default Kickoff;
