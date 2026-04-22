@@ -28,9 +28,7 @@ const Kickoff = ({
       </p>
       <p>
         <span className="">Title: </span>
-        <a href={paper} className="hover:text-logo_main  cursor-pointer">
-          {title}
-        </a>
+        <span>{title}</span>
       </p>
       <p className="text-sm font-light text-logo_txt">
         <span className="">Location: </span>
