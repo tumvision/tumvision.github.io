@@ -16,6 +16,13 @@ export default function Meetups() {
         needed.
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
+      <ReadingGroup
+        speaker="Prof. Dr. Angela Dai"
+        title="Building Interactable 3D Spaces from Imperfect Real-World Data"
+        paper="https://www.3dunderstanding.org/publications.html"
+        time="05.05.2026 18:00-19:00"
+        className="mt-2"
+      />
       <Kickoff
         speaker="Prof. Dr. Matthias Nießner"
         title="World Models: Connecting the Digital and Physical World"
