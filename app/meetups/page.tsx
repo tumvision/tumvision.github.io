@@ -23,6 +23,13 @@ export default function Meetups() {
         time="19.05.2026 18:00-19:00"
         className="mt-2"
       />
+      <ReadingGroup
+        speaker="Nicolas von Lützow"
+        title="GaussianGPT: Towards Autoregressive 3D Gaussian Scene Generation"
+        paper="https://nicolasvonluetzow.github.io/GaussianGPT/"
+        time="26.05.2026 18:00-19:00"
+        className="mt-2"
+      />
       <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="Prof. Dr. Angela Dai"
