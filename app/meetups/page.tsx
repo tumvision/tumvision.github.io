@@ -17,6 +17,14 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
+        speaker="Ganlin Zhang"
+        title="Vista-SLAM: Efficient and Accurate Real-Time 3D Geometry Recovery"
+        paper="https://ganlinzhang.xyz/vista-slam/"
+        time="19.05.2026 18:00-19:00"
+        className="mt-2"
+      />
+      <Headline className="text-xl mt-4">Previous Events</Headline>
+      <ReadingGroup
         speaker="Prof. Dr. Angela Dai"
         title="Building Interactable 3D Spaces from Imperfect Real-World Data"
         paper="https://www.3dunderstanding.org/publications.html"
@@ -29,7 +37,6 @@ export default function Meetups() {
         time="28.04.2026 18:00-19:00"
         className="mt-2"
       />
-      <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroupNew
         speaker="Cecilia Curreli"
         time="09.12.2025 18:00-19:00"
