@@ -26,7 +26,7 @@ export default function Meetups() {
       <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="Weirong Chen"
-        title="NOVAR: Beyond Pixel-Aligned 3D Reconstruction"
+        title="NOV3R: Beyond Pixel-Aligned 3D Reconstruction"
         paper="https://wrchen530.github.io/nova3r/"
         time="02.06.2026 18:00-19:00"
         className="mt-2"
