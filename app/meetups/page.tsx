@@ -17,13 +17,34 @@ export default function Meetups() {
       </Text>
       <Headline className="text-xl mt-4">Upcoming Events</Headline>
       <ReadingGroup
+        speaker="Snehal Jauhri"
+        title="3D Al for Robot Perception and Learning"
+        paper="https://www.3dunderstanding.org/"
+        time="30.06.2026 18:00-19:00"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Abhishek Saroha"
+        title="EgoFlow: Gradient-Guided Flow Matching for Egocentric 6DoF Object Motion Generation"
+        paper="https://abhi-rf.github.io/egoflow/"
+        time="07.07.2026 18:00-19:00"
+        className="mt-2"
+      />
+      <ReadingGroup
+        speaker="Zhuojiang Cai"
+        title="GazeOnce360: Fisheye-Based 360° Multi-Person Gaze Estimation with Global-Local Feature Fusion"
+        paper="https://caizhuojiang.com/GazeOnce360/"
+        time="14.07.2026 18:00-19:00"
+        className="mt-2"
+      />
+      <Headline className="text-xl mt-4">Previous Events</Headline>
+      <ReadingGroup
         speaker="Ziya Erkoc"
         title="WorldAgents: Can Foundation Image Models be Agents for 3D World Models?"
         paper="https://ziyaerkoc.com/worldagents/"
         time="09.06.2026 18:00-19:00"
         className="mt-2"
       />
-      <Headline className="text-xl mt-4">Previous Events</Headline>
       <ReadingGroup
         speaker="Weirong Chen"
         title="NOV3R: Beyond Pixel-Aligned 3D Reconstruction"
