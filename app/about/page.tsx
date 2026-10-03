@@ -35,14 +35,21 @@ export default function About() {
     <Container>
       <Headline label="01">About</Headline>
       <Text className="mt-4 text-lg">
-        Hey everyone, we are a group of computer science students at the
-        Technical University of Munich (TUM) enthusiastic about the realm of 3D
-        computer vision. Our initiative has been established with the purpose of
-        fostering a collaborative community among like-minded students,
-        researchers, and industry professionals who are interested in the latest
-        developments in the field of 3D computer vision and are passionate about
-        advancing the state of the art through research. Through our efforts, we
-        aim to enhance the 3D computer vision ecosystem in Munich.
+        We are a group of computer science students at the Technical University
+        of Munich (TUM) with a shared passion for 3D computer vision.
+      </Text>
+      <Text className="mt-3 text-lg">
+        Our initiative was established to foster a collaborative community of
+        like-minded students, researchers, and industry professionals who are
+        interested in the latest developments in 3D computer vision and
+        passionate about advancing the field through research and collaboration.
+      </Text>
+      <Text className="mt-3 text-lg">
+        We aim to create an open and welcoming space where people can share
+        ideas, discover new research, learn from each other, and connect with
+        others who share the same interests. Through our community, we hope to
+        contribute to a vibrant and growing 3D computer vision ecosystem in
+        Munich.
       </Text>
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
         {PHOTOS.map(({ src, caption }) => (
