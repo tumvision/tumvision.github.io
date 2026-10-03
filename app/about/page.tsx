@@ -1,14 +1,40 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 // import { MemberImage, TeamImage } from "@/app/components/Member";
 import Container from "@/app/components/Container";
 import Text from "@/app/components/Text";
 import Headline from "@/app/components/Headline";
+import { FiMic, FiBookOpen, FiCoffee } from "react-icons/fi";
+
+const ACTIVITIES = [
+  {
+    icon: <FiMic />,
+    title: "Meetups",
+    text: "Students, researchers and industry present their work, discuss the latest trends and network.",
+  },
+  {
+    icon: <FiBookOpen />,
+    title: "Reading Groups",
+    text: "Dive deep into a specific paper or topic and learn from each other.",
+  },
+  {
+    icon: <FiCoffee />,
+    title: "Social Events",
+    text: "Get to know each other and have fun together beyond the lecture hall.",
+  },
+];
+
+const PHOTOS = [
+  { src: "/about/kickoff-ss26.jpg", caption: "Kickoff SS26 with Prof. Nießner" },
+  { src: "/about/professor-talk-ss26.jpg", caption: "Professor Talk SS26 with Prof. Dai" },
+];
 
 export default function About() {
   return (
     <Container>
-      <Headline>About</Headline>
-      <Text className="mt-2">
+      <Headline label="01">About</Headline>
+      <Text className="mt-4 text-lg">
         Hey everyone, we are a group of computer science students at the
         Technical University of Munich (TUM) enthusiastic about the realm of 3D
         computer vision. Our initiative has been established with the purpose of
@@ -18,15 +44,59 @@ export default function About() {
         advancing the state of the art through research. Through our efforts, we
         aim to enhance the 3D computer vision ecosystem in Munich.
       </Text>
-      <Headline className="mt-5">Activities</Headline>
-      <Text className="mt-2">
-        We organize various events such as meetups, reading groups and social
-        events. Our meetups are a platform for students, researchers, and
-        industry professionals to present their work, discuss the latest trends
-        in the field, and network with others. Our reading groups are a great
-        opportunity to dive deep into a specific topic and learn from each
-        other. Social events are a great way to get to know each other and have
-        fun together.
+      <div className="mt-8 grid gap-3 sm:grid-cols-2">
+        {PHOTOS.map(({ src, caption }) => (
+          <figure key={src}>
+            <Image
+              src={src}
+              alt={`Students at the ${caption}`}
+              width={800}
+              height={600}
+              className="rounded-xl border border-line"
+            />
+            <figcaption className="mt-2 font-mono text-xs text-muted">
+              {"// "}
+              {caption}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <Headline size="sm" className="mt-12">Activities</Headline>
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        {ACTIVITIES.map(({ icon, title, text }) => (
+          <div
+            key={title}
+            className="rounded-xl border border-line bg-surface/60 p-5 transition hover:border-logo_main/40 hover:bg-surface"
+          >
+            <span className="text-2xl text-logo_main">{icon}</span>
+            <h3 className="mt-3 text-lg text-logo_txt">{title}</h3>
+            <p className="mt-1 text-sm font-normal leading-relaxed text-muted">{text}</p>
+          </div>
+        ))}
+      </div>
+      <Headline size="sm" className="mt-12">Community</Headline>
+      <Text className="mt-4">
+        We are an international research community at TUM, bringing together
+        people from a wide variety of cultural and national backgrounds. We value
+        diversity and inclusion, and we are committed to maintaining a respectful
+        and welcoming environment for everyone.
+      </Text>
+      <Text className="mt-3">
+        Discrimination or harassment of any kind, including remarks targeting
+        someone&apos;s nationality, ethnicity, religion, gender, or background, has
+        no place in our community. Let&apos;s continue building an open,
+        supportive, and inclusive community together.
+      </Text>
+      <Text className="mt-6">
+        Everyone is welcome - no registration needed, just drop by. Check out the{" "}
+        <Link href="/meetups" className="text-logo_main hover:underline">
+          upcoming meetups
+        </Link>{" "}
+        or reach us at{" "}
+        <a href="mailto:contact@tumvision.club" className="text-logo_main hover:underline">
+          contact@tumvision.club
+        </a>
+        .
       </Text>
       {/* <Headline className="mt-5">Team</Headline>
       <Text className="mt-2">

@@ -7,10 +7,12 @@ type ContainerProps = {
 
 const Container = ({ children }: ContainerProps) => {
   return (
-    <main className="flex flex-col justify-between pt-28 min-h-screen w-8/12 md:max-w-[700px] mx-auto">
-      <div>{children}</div>
-      <Footer mode="dynamic" />
-    </main>
+    <div className="flex min-h-screen flex-col">
+      <main className="mx-auto w-full max-w-3xl flex-1 px-6 pb-20 pt-32">
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 };
 
