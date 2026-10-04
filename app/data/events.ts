@@ -38,8 +38,9 @@ export const EVENT_LABELS: Record<EventType, string> = {
   "professor-talk": "Professor Talk",
 };
 
-// the semester kickoff keynote gets a more prominent card
-export const isFeatured = (event: ClubEvent) => event.type === "kickoff";
+// kickoff keynotes and professor talks get a more prominent card
+export const isFeatured = (event: ClubEvent) =>
+  event.type === "kickoff" || event.type === "professor-talk";
 
 export const EVENTS: ClubEvent[] = [
   {

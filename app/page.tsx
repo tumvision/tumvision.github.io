@@ -3,11 +3,10 @@ import Link from "next/link";
 import Footer from "@/app/components/Footer";
 import PointCloud from "@/app/components/PointCloud";
 import NextEvent from "@/app/components/NextEvent";
-import { EVENTS, todayInMunich } from "@/app/data/events";
+import EventStats from "@/app/components/EventStats";
+import { todayInMunich } from "@/app/data/events";
 
 export default function Home() {
-  const speakers = new Set(EVENTS.map((e) => e.speaker)).size;
-
   return (
     <div className="flex min-h-screen flex-col">
       <main className="relative flex flex-1 items-center overflow-hidden">
@@ -66,20 +65,7 @@ export default function Home() {
             <NextEvent buildDate={todayInMunich()} />
           </div>
 
-          <dl className="mt-10 flex gap-10 font-mono">
-            <div>
-              <dt className="text-xs text-muted">talks hosted</dt>
-              <dd className="text-2xl text-logo_txt">{EVENTS.length}</dd>
-            </div>
-            <div>
-              <dt className="text-xs text-muted">speakers</dt>
-              <dd className="text-2xl text-logo_txt">{speakers}</dd>
-            </div>
-            <div>
-              <dt className="text-xs text-muted">registration</dt>
-              <dd className="text-2xl text-logo_txt">none</dd>
-            </div>
-          </dl>
+          <EventStats buildDate={todayInMunich()} />
         </div>
       </main>
       <Footer />

@@ -21,7 +21,9 @@ const EventList = ({ buildDate }: EventListProps) => {
 
   const { upcoming, previous } = splitEvents(today);
 
-  // group previous events by semester, each led by its kickoff keynote
+  // group previous events by semester, led by the kickoff keynote, then professor talks
+  const rank = (event: ClubEvent) =>
+    event.type === "kickoff" ? 0 : event.type === "professor-talk" ? 1 : 2;
   const semesters: { key: string; label: string; events: ClubEvent[] }[] = [];
   for (const event of previous) {
     const { key, label } = semesterOf(event.date);
@@ -31,7 +33,7 @@ const EventList = ({ buildDate }: EventListProps) => {
     semesters[semesters.length - 1].events.push(event);
   }
   for (const semester of semesters) {
-    semester.events.sort((a, b) => Number(b.type === "kickoff") - Number(a.type === "kickoff"));
+    semester.events.sort((a, b) => rank(a) - rank(b));
   }
 
   return (
