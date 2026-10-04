@@ -1,10 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiLinkedin, FiMail } from "react-icons/fi";
 import { BsTwitterX } from "react-icons/bs";
 
 const SOCIALS = [
-  { label: "GitHub", icon: <FiGithub />, href: "https://github.com/tumvision" },
   { label: "LinkedIn", icon: <FiLinkedin />, href: "https://www.linkedin.com/company/tumvision" },
   { label: "X", icon: <BsTwitterX />, href: "https://x.com/TUMVision" },
 ];
