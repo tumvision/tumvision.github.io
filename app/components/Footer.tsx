@@ -1,54 +1,46 @@
 import React from "react";
 import Link from "next/link";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { BsTwitterX } from "react-icons/bs";
-import InfoStack, { InfoStackItem } from "@/app/components/InfoStack";
 
-type FooterProps = {
-  mode: "fixed" | "dynamic";
-};
+const SOCIALS = [
+  { label: "GitHub", icon: <FiGithub />, href: "https://github.com/tumvision" },
+  { label: "LinkedIn", icon: <FiLinkedin />, href: "https://www.linkedin.com/company/tumvision" },
+  { label: "X", icon: <BsTwitterX />, href: "https://x.com/TUMVision" },
+];
 
-const Footer = ({ mode }: FooterProps) => {
+const Footer = () => {
   return (
-    <React.Fragment>
-      <div
-        className={`${mode} bottom-0 flex justify-center items-center w-full p-2 text-sm gap-6 text-logo_txt`}
-      >
-        <Link href="/imprint" className="cursor-pointer">
-          <span className="text-lg fong-bold text-logo_main">&gt; </span>{" "}
-          <span className="hover:text-logo_main">Imprint</span>
-        </Link>
-        <Link href="/privacy" className="cursor-pointer">
-          <span className="text-lg fong-bold text-logo_main">&gt; </span>{" "}
-          <span className="hover:text-logo_main">Privacy Policy</span>
-        </Link>
+    <footer className="border-t border-line/60">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-6 text-sm font-normal text-muted md:flex-row md:justify-between">
+        <a
+          href="mailto:contact@tumvision.club"
+          className="flex items-center gap-2 font-mono text-xs hover:text-logo_main"
+        >
+          <FiMail /> contact@tumvision.club
+        </a>
+        <div className="flex items-center gap-5 text-lg">
+          {SOCIALS.map(({ label, icon, href }) => (
+            <a
+              key={label}
+              href={href}
+              aria-label={label}
+              className="transition hover:-translate-y-0.5 hover:text-logo_main"
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
+        <div className="flex items-center gap-5">
+          <Link href="/imprint" className="hover:text-logo_main">
+            <span className="text-logo_main">&gt;</span> Imprint
+          </Link>
+          <Link href="/privacy" className="hover:text-logo_main">
+            <span className="text-logo_main">&gt;</span> Privacy Policy
+          </Link>
+        </div>
       </div>
-
-      <InfoStack position="left">
-        <InfoStackItem
-          type="icon"
-          content={<FiGithub />}
-          link="https://github.com/tumvision"
-        />
-        <InfoStackItem
-          type="icon"
-          content={<FiLinkedin />}
-          link="https://www.linkedin.com/company/tumvision"
-        />
-        <InfoStackItem
-          type="icon"
-          content={<BsTwitterX />}
-          link="https://x.com/TUMVision"
-        />
-      </InfoStack>
-      <InfoStack position="right">
-        <InfoStackItem
-          type="text"
-          content="contact@tumvision.club"
-          link="mailto:contact@tumvision.club"
-        />
-      </InfoStack>
-    </React.Fragment>
+    </footer>
   );
 };
 

@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
         Note: since we are based in germany the privacy notice will be provided
         in german language only.
       </Text>
-      <Headline className="mt-5 text-xl">
+      <Headline size="sm" className="mt-8">
         Datenschutzerklärung Einleitung und Überblick
       </Headline>
       <Text className="mt-2">
@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
         anzusehen. Unsere Kontaktdaten finden Sie selbstverständlich auch im
         Impressum.
       </Text>
-      <Headline className="mt-5 text-xl">Anwendungsbereich</Headline>
+      <Headline size="sm" className="mt-8">Anwendungsbereich</Headline>
       <Text className="mt-2">
         Diese Datenschutzerklärung gilt für alle von uns im Unternehmen
         verarbeiteten personenbezogenen Daten und für alle personenbezogenen
@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
         Ihnen in Rechtsbeziehungen eintreten, werden wir Sie gegebenenfalls
         gesondert informieren.
       </Text>
-      <Headline className="mt-5 text-xl">Rechtsgrundlagen</Headline>
+      <Headline size="sm" className="mt-8">Rechtsgrundlagen</Headline>
       <Text className="mt-2">
         Datenschutzerklärung geben wir Ihnen transparente Informationen zu den
         rechtlichen Grundsätzen und Vorschriften, also den Rechtsgrundlagen der
@@ -144,7 +144,7 @@ export default function PrivacyPolicy() {
         Sofern weitere regionale oder nationale Gesetze zur Anwendung kommen,
         informieren wir Sie in den folgenden Abschnitten darüber.{" "}
       </Text>
-      <Headline className="mt-5 text-xl">
+      <Headline size="sm" className="mt-8">
         Kontaktdaten des Verantwortlichen
       </Headline>
       <Text className="mt-2">
@@ -169,7 +169,7 @@ export default function PrivacyPolicy() {
           www.tumvision.club/imprint
         </a>
       </Text>
-      <Headline className="mt-5 text-xl">Speicherdauer</Headline>
+      <Headline size="sm" className="mt-8">Speicherdauer</Headline>
       <Text className="mt-2">
         Dass wir personenbezogene Daten nur so lange speichern, wie es für die
         Bereitstellung unserer Dienstleistungen und Produkte unbedingt notwendig
@@ -189,7 +189,7 @@ export default function PrivacyPolicy() {
         Über die konkrete Dauer der jeweiligen Datenverarbeitung informieren wir
         Sie weiter unten, sofern wir weitere Informationen dazu haben.
       </Text>
-      <Headline className="mt-5 text-xl">
+      <Headline size="sm" className="mt-8">
         Rechte laut Datenschutz-Grundverordnung
       </Headline>
       <Text className="mt-2">
@@ -311,7 +311,7 @@ export default function PrivacyPolicy() {
         wenden. Für unser Unternehmen ist die folgende lokale Datenschutzbehörde
         zuständig:
       </Text>
-      <Headline className="mt-5 text-xl">
+      <Headline size="sm" className="mt-8">
         GitHub Pages Datenschutzerklärung
       </Headline>
       <Text className="mt-2">

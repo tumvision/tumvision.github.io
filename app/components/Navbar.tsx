@@ -4,23 +4,25 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useScroll, motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAVBAR_ITEMS = [
-  { id: 1, link: "About", href: "about" },
-  { id: 2, link: "Meetups", href: "meetups" },
-  // { id: 3, link: "Projects", href: "projects" },
-  // { id: 4, link: "Contact", href: "contact" },
+  { id: 1, link: "About", href: "/about" },
+  { id: 2, link: "Meetups", href: "/meetups" },
+  // { id: 3, link: "Projects", href: "/projects" },
+  // { id: 4, link: "Contact", href: "/contact" },
 ];
 
 type NavbarVariants = "hidden" | "default" | "visible";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
+  const pathname = usePathname();
   const [variant, setVariant] = useState<NavbarVariants>("default");
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    return scrollY.onChange(() => {
+    return scrollY.on("change", () => {
       if (scrollY.get() < 50) {
         setVariant("default");
       } else if (scrollY.getVelocity() > 0) {
@@ -29,7 +31,7 @@ const Navbar = () => {
         setVariant("visible");
       }
     });
-  }, [scrollY, variant, setVariant]);
+  }, [scrollY]);
 
   useEffect(() => {
     if (open) {
@@ -47,15 +49,21 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", updateViewBox);
   }, []);
 
+  const isActive = (href: string) => pathname?.startsWith(href);
+
   return (
     <React.Fragment>
       <motion.div
-        className={`fixed top-0 z-[2000] w-full`}
-        initial={open}
+        className={`fixed top-0 z-[2000] w-full transition-colors duration-300 ${
+          variant === "default" && !open
+            ? "bg-transparent"
+            : "border-b border-line/60 bg-logo_bg/80 backdrop-blur-md"
+        }`}
+        initial={false}
         animate={{
-          paddingTop: variant === "default" ? "1.5rem" : "0.75rem",
-          paddingBottom: variant === "default" ? "1.5rem" : "0.75rem",
-          y: variant === "hidden" ? "-100%" : "0%",
+          paddingTop: variant === "default" ? "1.25rem" : "0.75rem",
+          paddingBottom: variant === "default" ? "1.25rem" : "0.75rem",
+          y: variant === "hidden" && !open ? "-100%" : "0%",
         }}
         transition={{
           duration: 0.3,
@@ -63,10 +71,10 @@ const Navbar = () => {
         }}
       >
         <motion.div
-          className="fixed top-0 flex h-screen w-1/2 flex-col items-center justify-center bg-slate-800 md:hidden"
+          className="fixed right-0 top-0 flex h-screen w-2/3 max-w-xs flex-col items-center justify-center border-l border-line bg-surface md:hidden"
           initial={false}
           animate={{
-            x: open ? "100%" : "200%",
+            x: open ? "0%" : "100%",
           }}
           transition={{
             duration: 0.3,
@@ -82,26 +90,38 @@ const Navbar = () => {
                   setOpen(false);
                 }}
               >
-                <span className="txt font-mono text-logo_main">{`[0${id}]`}</span>
-                <span className="text-2xl text-logo_txt hover:text-logo_main">
+                <span className="font-mono text-sm text-logo_main">{`[0${id}]`}</span>
+                <span
+                  className={`text-2xl hover:text-logo_main ${
+                    isActive(href) ? "text-logo_main" : "text-logo_txt"
+                  }`}
+                >
                   {link}
                 </span>
               </Link>
             ))}
           </div>
         </motion.div>
-        <nav className="z-20 flex transform flex-row items-center justify-between px-5 duration-300 ease-out md:px-8 lg:px-10">
-          <Link
-            href="/"
-            className="text-logo_main hover:text-logo_txt cursor-pointer text-4xl"
-          >
-            V
+        <nav className="relative z-20 mx-auto flex max-w-5xl flex-row items-center justify-between px-6">
+          <Link href="/" className="group text-2xl font-extrabold tracking-tight" onClick={() => setOpen(false)}>
+            <span className="text-logo_txt">TUM</span>
+            <span className="text-logo_main transition group-hover:text-logo_txt">Vision</span>
           </Link>
-          <div className="hidden flex-row items-center gap-2 text-xs font-normal md:flex lg:gap-4">
+          <div className="hidden flex-row items-center gap-2 font-mono text-sm md:flex lg:gap-4">
             {NAVBAR_ITEMS.map(({ id, link, href }) => (
-              <Link href={href} key={id} className="cursor-pointer p-2">
-                <span className="pr-1 text-logo_main">{`[0${id}]`}</span>
-                <span className="text-logo_txt hover:text-logo_main">
+              <Link
+                href={href}
+                key={id}
+                className={`rounded-md px-3 py-1.5 transition hover:bg-surface ${
+                  isActive(href) ? "bg-surface" : ""
+                }`}
+              >
+                <span className="pr-1.5 text-logo_main">{`0${id}.`}</span>
+                <span
+                  className={`hover:text-logo_main ${
+                    isActive(href) ? "text-logo_main" : "text-logo_txt"
+                  }`}
+                >
                   {link}
                 </span>
               </Link>
@@ -116,7 +136,7 @@ const Navbar = () => {
         </nav>
       </motion.div>
       <div
-        className={`fixed top-0 h-screen w-screen backdrop-blur-sm
+        className={`fixed top-0 z-[1999] h-screen w-screen bg-logo_bg/40 backdrop-blur-sm
             ${open ? "" : "hidden"}`}
         onClick={() => setOpen(false)}
       ></div>

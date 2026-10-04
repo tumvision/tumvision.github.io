@@ -5,9 +5,9 @@ type TextProps = {
   className?: string;
 };
 
-const Text = ({ children, className }: TextProps) => {
+const Text = ({ children, className = "" }: TextProps) => {
   return (
-    <p className={`text-sm font-light text-logo_txt ${className}`}>
+    <p className={`text-base font-normal leading-relaxed text-muted ${className}`}>
       {children}
     </p>
   );
