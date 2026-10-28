@@ -5,12 +5,13 @@ import { ADDRESS, ClubEvent, EVENT_LABELS, isFeatured } from "@/app/data/events"
 type EventCardProps = {
   event: ClubEvent;
   highlight?: boolean;
+  upcoming?: boolean;
   className?: string;
 };
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const EventCard = ({ event, highlight = false, className = "" }: EventCardProps) => {
+const EventCard = ({ event, highlight = false, upcoming = false, className = "" }: EventCardProps) => {
   const [year, month, day] = event.date.split("-");
   const featured = isFeatured(event);
 
@@ -42,25 +43,27 @@ const EventCard = ({ event, highlight = false, className = "" }: EventCardProps)
             &gt; {EVENT_LABELS[event.type]}
           </span>
         )}
-        <h3
-          className={`leading-snug text-logo_txt ${
-            featured ? "mt-2 text-lg font-bold sm:text-2xl" : "mt-1 text-base sm:text-lg"
-          }`}
-        >
-          {event.paper ? (
-            <a
-              href={event.paper}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-logo_main"
-            >
-              {event.title}
-              <FiArrowUpRight className="ml-1 inline-block align-text-top text-muted transition group-hover:text-logo_main" />
-            </a>
-          ) : (
-            event.title
-          )}
-        </h3>
+        {event.title && (
+          <h3
+            className={`leading-snug text-logo_txt ${
+              featured ? "mt-2 text-lg font-bold sm:text-2xl" : "mt-1 text-base sm:text-lg"
+            }`}
+          >
+            {event.paper ? (
+              <a
+                href={event.paper}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-logo_main"
+              >
+                {event.title}
+                <FiArrowUpRight className="ml-1 inline-block align-text-top text-muted transition group-hover:text-logo_main" />
+              </a>
+            ) : (
+              event.title
+            )}
+          </h3>
+        )}
         <div className="mt-2 flex flex-col gap-1 text-sm font-normal text-muted sm:flex-row sm:flex-wrap sm:gap-x-5">
           <span className="flex items-center gap-1.5">
             <FiUser className="shrink-0" />
@@ -95,6 +98,16 @@ const EventCard = ({ event, highlight = false, className = "" }: EventCardProps)
             </a>
           )}
         </div>
+        {upcoming && event.register && (
+          <a
+            href={event.register}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-logo_main px-4 py-1.5 font-mono text-sm text-logo_bg transition hover:opacity-80"
+          >
+            Register <FiArrowUpRight />
+          </a>
+        )}
       </div>
     </article>
   );

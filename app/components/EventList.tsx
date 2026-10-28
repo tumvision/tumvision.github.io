@@ -24,7 +24,10 @@ const EventList = ({ buildDate }: EventListProps) => {
   // group previous events by semester, led by the kickoff keynote, then professor talks
   const rank = (event: ClubEvent) =>
     event.type === "kickoff" ? 0 : event.type === "professor-talk" ? 1 : 2;
-  const semesters: { key: string; label: string; events: ClubEvent[] }[] = [];
+  // the current semester always leads, even before its first talk has happened
+  const semesters: { key: string; label: string; events: ClubEvent[] }[] = [
+    { ...semesterOf(today), events: [] },
+  ];
   for (const event of previous) {
     const { key, label } = semesterOf(event.date);
     if (semesters[semesters.length - 1]?.key !== key) {
@@ -44,7 +47,7 @@ const EventList = ({ buildDate }: EventListProps) => {
       {upcoming.length > 0 ? (
         <div className="mt-4 flex flex-col gap-3">
           {upcoming.map((event, i) => (
-            <EventCard key={event.date + event.speaker} event={event} highlight={i === 0} />
+            <EventCard key={event.date + event.speaker} event={event} highlight={i === 0} upcoming />
           ))}
         </div>
       ) : (
@@ -68,7 +71,7 @@ const EventList = ({ buildDate }: EventListProps) => {
           {previous.length} talks
         </span>
       </Headline>
-      {/* latest semester open, older ones collapsed so the page stays short */}
+      {/* current semester open, older ones collapsed so the page stays short */}
       {semesters.map(({ key, label, events }, i) => (
         <details key={key} open={i === 0} className="group mt-6">
           <summary className="flex cursor-pointer list-none items-center gap-3 font-mono text-sm text-logo_main [&::-webkit-details-marker]:hidden">
@@ -78,9 +81,13 @@ const EventList = ({ buildDate }: EventListProps) => {
             <span className="h-px flex-1 bg-line" />
           </summary>
           <div className="mt-3 flex flex-col gap-3">
-            {events.map((event) => (
-              <EventCard key={event.date + event.speaker} event={event} />
-            ))}
+            {events.length > 0 ? (
+              events.map((event) => (
+                <EventCard key={event.date + event.speaker} event={event} />
+              ))
+            ) : (
+              <Text>No talks yet this semester - see upcoming events above.</Text>
+            )}
           </div>
         </details>
       ))}

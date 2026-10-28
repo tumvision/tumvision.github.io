@@ -11,12 +11,13 @@ export type Room = {
 export type ClubEvent = {
   type: EventType;
   speaker: string;
-  title: string;
+  title?: string; // leave out while the title is not announced yet
   date: string; // YYYY-MM-DD
   time: string;
   paper?: string;
   affiliation?: string; // shown for keynote speakers
   post?: string; // LinkedIn post about the event
+  register?: string; // registration link, shown while the event is upcoming
   room: Room;
 };
 
@@ -32,6 +33,11 @@ const ROOM_01_10_11: Room = {
   link: "https://nav.tum.de/room/5610.01.011",
 };
 
+const ROOM_00_04_011: Room = {
+  name: "00.04.011",
+  link: "https://nav.tum.de/room/5604.EG.011",
+};
+
 export const EVENT_LABELS: Record<EventType, string> = {
   "reading-group": "Paper Reading Group",
   kickoff: "Kickoff Keynote",
@@ -43,6 +49,16 @@ export const isFeatured = (event: ClubEvent) =>
   event.type === "kickoff" || event.type === "professor-talk";
 
 export const EVENTS: ClubEvent[] = [
+  {
+    type: "kickoff",
+    speaker: "Prof. Dr. Daniel Cremers",
+    affiliation: "TUM",
+    // title: "Talk title here", // TODO: uncomment once the title is announced
+    date: "2026-11-12",
+    time: "18:00-20:00",
+    register: "https://luma.com/e55f7n7p",
+    room: ROOM_00_04_011,
+  },
   {
     type: "reading-group",
     speaker: "Zhuojiang Cai",

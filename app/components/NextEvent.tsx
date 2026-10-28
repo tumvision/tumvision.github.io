@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
-import { splitEvents, todayInMunich } from "@/app/data/events";
+import { EVENT_LABELS, splitEvents, todayInMunich } from "@/app/data/events";
 
 // Teaser for the home page: next upcoming talk, or the latest one if none is planned.
 const NextEvent = ({ buildDate }: { buildDate: string }) => {
@@ -28,7 +28,9 @@ const NextEvent = ({ buildDate }: { buildDate: string }) => {
       <span className="font-mono text-xs text-logo_main">
         {upcoming[0] ? `> next ${kind}` : `> latest ${kind}`} · {day}.{month}.{year} · {event.time}
       </span>
-      <p className="mt-1 line-clamp-2 text-base leading-snug text-logo_txt">{event.title}</p>
+      <p className="mt-1 line-clamp-2 text-base leading-snug text-logo_txt">
+        {event.title ?? EVENT_LABELS[event.type]}
+      </p>
       <p className="mt-1 flex items-center justify-between text-sm font-normal text-muted">
         {event.speaker}
         <FiArrowRight className="text-logo_main transition group-hover:translate-x-1" />
