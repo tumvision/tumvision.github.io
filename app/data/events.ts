@@ -62,7 +62,8 @@ export const EVENTS: ClubEvent[] = [
     type: "kickoff",
     speaker: "Prof. Dr. Daniel Cremers",
     affiliation: "TUM",
-    title: "The Dawn of Spatial Intelligence: 3D Computer Vision in the Age of Deep Learning", // TODO: uncomment once the title is announced
+    title: "The Dawn of Spatial Intelligence: 3D Computer Vision in the Age of Deep Learning",
+    post: "https://www.linkedin.com/feed/update/urn:li:activity:7528728735341056002",
     date: "2026-11-12",
     time: "18:00-20:00",
     register: "https://luma.com/e55f7n7p",
