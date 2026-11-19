@@ -50,6 +50,15 @@ export const isFeatured = (event: ClubEvent) =>
 
 export const EVENTS: ClubEvent[] = [
   {
+    type: "reading-group",
+    speaker: "Simon Giebenhain",
+    title: "A Recent History of 3D Vision Through the Lens of Virtual Avatars",
+    paper: "https://lnkd.in/erSRU7Fh",
+    date: "2026-11-19",
+    time: "18:00-19:00",
+    room: ROOM_02_13_010,
+  },
+  {
     type: "kickoff",
     speaker: "Prof. Dr. Daniel Cremers",
     affiliation: "TUM",
